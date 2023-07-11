@@ -1,0 +1,46 @@
+/* CSS Stylesheet */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.column {
+  width: 50%;
+  float: left;
+  border: 1px solid black;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  .column {
+    width: 100%;
+    float: none;
+  }
+
+  @media (orientation: portrait) {
+    .container {
+      background-color: #ccc;
+    }
+  }
+
+  @media (orientation: landscape) {
+    .container {
+      background-color: #eee;
+    }
+  }
+
+  @media (min-resolution: 2dppx) {
+    .column {
+      border-color: red;
+    }
+  }
+}

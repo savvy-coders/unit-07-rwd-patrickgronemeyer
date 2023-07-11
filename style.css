@@ -1,0 +1,15 @@
+/* CSS Stylesheet */
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.column {
+  width: 50%;
+  float: left;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
