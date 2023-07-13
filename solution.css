@@ -1,46 +1,44 @@
-/* CSS Stylesheet */
 .container {
-  width: 90%;
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 
-.column {
-  width: 50%;
-  float: left;
-  border: 1px solid black;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  transition-duration: 0.3s;
 }
 
 @media (max-width: 768px) {
-  .container {
-    width: 100%;
-  }
-
   .column {
     width: 100%;
     float: none;
   }
-
-  @media (orientation: portrait) {
-    .container {
-      background-color: #ccc;
-    }
+  
+  .nav {
+    flex-direction: column;
+    font-size: 16px;
   }
+}
 
-  @media (orientation: landscape) {
-    .container {
-      background-color: #eee;
-    }
+@media (orientation: portrait) {
+  .container {
+    background-color: #ccc;
+    width: 90%;
+    margin: 0 auto;
   }
+}
 
-  @media (min-resolution: 2dppx) {
-    .column {
-      border-color: red;
-    }
+@media (orientation: landscape) {
+  .container {
+    background-color: #eee;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  .column {
+    border-color: red;
   }
 }
