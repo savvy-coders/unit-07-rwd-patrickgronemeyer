@@ -1,15 +1,44 @@
-/* CSS Stylesheet */
 .container {
   width: 100%;
-  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.column {
-  width: 50%;
-  float: left;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  transition-duration: 0.3s;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+@media (max-width: 768px) {
+  .column {
+    width: 100%;
+    float: none;
+  }
+  
+  .nav {
+    flex-direction: column;
+    font-size: 16px;
+  }
+}
+
+@media (orientation: portrait) {
+  .container {
+    background-color: #ccc;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (orientation: landscape) {
+  .container {
+    background-color: #eee;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  .column {
+    border-color: red;
+  }
 }
