@@ -6,7 +6,7 @@ Instructions:
 
 a) Change the width of the .container class to 90% and add a margin property to center it horizontally.
 
-b) Add a media query that targets screen sizes with a maximum width of 768px. Inside the media query, set the width of the .column class to 100% and remove the float property.
+b) Add a media query that targets screen sizes with a maximum width of 768px. Inside the media query, set the width of the .column class to 80% and remove the float property.
 
 c) Apply a media query to target the orientation of a device. Inside the media query for portrait orientation, change the background color of the .container class to #ccc. Inside the media query for landscape orientation, change the background color of the .container class to #eee.
 
