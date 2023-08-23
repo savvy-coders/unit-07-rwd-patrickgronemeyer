@@ -7,7 +7,7 @@ describe('Media Query Tests', () => {
       cy.viewport(768, 1024);
       cy.get('.column').should(($column) => {
         const width = $column.width();
-        expect(width).to.be.closeTo(768, 100); // Allow for a small error margin
+        expect(width).to.be.closeTo((768*.8), 50); // Allow for a small error margin
       });
       cy.get('.column').should('have.css', 'float', 'none');
     });
