@@ -1,9 +1,54 @@
+/* a) Change the width of the .container class to 90% and center it horizontally. */
 .container {
-  width: 100%;
-  margin: 0 auto;
+  width: 90%;
+  margin: 0 auto; /* Centers the container */
 }
 
-.nav {
-  display: block;
-  justify-content: space-between;
+/* b) Add a media query for screens with a max width of 768px. Inside, adjust .column class. */
+@media (max-width: 768px) {
+  .column {
+    width: 80%;
+    float: none; /* Removes the float property */
+  }
+}
+
+/* c) Media queries for device orientation */
+@media (orientation: portrait) {
+  .container {
+    background-color: #ccc; /* Light grey for portrait orientation */
+  }
+}
+
+@media (orientation: landscape) {
+  .container {
+    background-color: #eee; /* Very light grey for landscape orientation */
+  }
+}
+
+/* d) Media query for high pixel density (retina displays) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .column {
+    border-color: red; /* Changes border color for high pixel density screens */
+  }
+}
+
+/* e) & f) Adjust navigation menu on screens with max-width of 768px using flexbox */
+@media (max-width: 768px) {
+  .nav {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+  }
+
+  .nav-item {
+    font-size: larger; /* Increases readability */
+  }
+}
+
+/* g) Add a transition effect to the navigation menu */
+.nav-item {
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+  transform: scale(1.1); /* Slightly enlarges the menu item on hover */
 }
